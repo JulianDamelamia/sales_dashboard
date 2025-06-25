@@ -1,0 +1,11 @@
+dash>=2.16.0
+plotly>=5.21.0
+
+sqlalchemy>=2.0
+psycopg2-binary>=2.9.9        
+
+pandas>=2.2.2
+numpy>=1.26.4
+faker>=24.8.0pip
+
+python-dotenv>=1.0.1

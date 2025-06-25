@@ -1,4 +1,4 @@
-from sqlalchemy import func
+rom sqlalchemy import func
 from db.models import Sales
 
 def total_ventas(session):

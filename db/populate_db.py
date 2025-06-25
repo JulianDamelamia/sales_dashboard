@@ -12,6 +12,7 @@ random.seed(42)
 np.random.seed(42)
 
 DATABASE_URL = "postgresql+psycopg2://bi_user:1234@localhost:5432/sales_db"
+
 engine = create_engine(DATABASE_URL, echo=False)
 Session = sessionmaker(bind=engine)
 session = Session()

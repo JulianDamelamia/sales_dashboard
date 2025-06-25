@@ -1,6 +1,18 @@
-rom sqlalchemy import func
+from sqlalchemy import func
 from db.models import Sales
+from db.populate_db import populate_database, session, engine
+import pandas as pd
 
+
+
+populate_database()
 def total_ventas(session):
-    total = session.query(func.sum(Sales.quantity * Sales.unit_price)).scalar()
-    return round(total or 0, 2)
+     total = session.query(func.sum(Sales.quantity * Sales.price)).scalar()
+     return round(total or 0, 2)
+
+
+df = pd.read_sql("SELECT * FROM dim_distributor", engine)
+
+print(df.head())
+
+print("Total ventas:", total_ventas(session))

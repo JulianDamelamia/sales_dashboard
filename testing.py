@@ -16,3 +16,4 @@ df = pd.read_sql("SELECT * FROM dim_distributor", engine)
 print(df.head())
 
 print("Total ventas:", total_ventas(session))
+#esto es una prueba para el bot de discord
